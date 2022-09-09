@@ -1,5 +1,6 @@
 //import styles from '../styles/home.module.scss'
 
+import { GetServerSideProps } from "next";
 import { useEffect, useState } from "react";
 
 interface Post {
@@ -7,8 +8,13 @@ interface Post {
   title: string;
 }
 
-export default function Home() {
-  const [posts, setPosts] = useState<Post[]>([]);
+interface HomeProps {
+  posts: Post[];
+}
+
+//export default function Home() {
+export default function Home({posts}:HomeProps) {
+  /*const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     fetch('http://localhost:3333/posts').then((response) => { //fetch é alternativa nativa ao axios
@@ -16,7 +22,7 @@ export default function Home() {
         setPosts(data)
       })
     })
-  }, []);
+  }, []);*/
 
   return (
     <div>
@@ -28,4 +34,16 @@ export default function Home() {
       </ul>
     </div>
   )
+}
+
+//node é quem faz a requisição ao invés do browser
+export const getServerSideProps: GetServerSideProps<HomeProps> = async () =>  {
+  const response = await fetch('http://localhost:3333/posts');
+  const posts = await response.json();
+
+  return{
+    props:{
+      posts,
+    },
+  };
 }

@@ -10,4 +10,4 @@ https://fonts.google.com/specimen/Roboto
 https://nextjs.org/docs/advanced-features/custom-document
 
  - instalação de api fake (não de forma global):
- npx json-server api.json -p 3333 -w
+ npx json-server api.json -p 3333 -w -d 2000 (-d 2000 é um delay de 2 segundos)
