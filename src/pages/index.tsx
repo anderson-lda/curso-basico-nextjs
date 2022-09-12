@@ -1,7 +1,7 @@
 //import styles from '../styles/home.module.scss'
 
 import { GetServerSideProps } from "next";
-import { useEffect, useState } from "react";
+//import { useEffect, useState } from "react";
 
 interface Post {
   id: string;
