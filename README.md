@@ -13,5 +13,9 @@ https://nextjs.org/docs/advanced-features/custom-document
  npx json-server api.json -p 3333 -w -d 2000 (-d 2000 é um delay de 2 segundos)
 
  - API utilizada na segunda etapa:
+npm install @prismicio/client@5.0.0
+npm install prismic-dom@2.2.5 (para auxiliar na tipagem)
+npm i --save-dev @types/prismic-dom
+dados armazenados e mais informações em:
 https://prismic.io/
-obs.: foi ativado o legacy builder em configurações
+obs.: foi ativado o legacy builder em configurações nesse site
