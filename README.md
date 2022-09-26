@@ -21,6 +21,6 @@ https://prismic.io/
 obs.: foi ativado o legacy builder em configurações nesse site
 
  - Pacotes de teste:
-npm i -D jest jest-dom ts-jest @testing-library/jest-dom @testing-library/dom @testing-library/react babel-jest identity-obj-proxy jest-environment-jsdom
+npm i -D jest jest-dom ts-jest jest-mock @testing-library/jest-dom @testing-library/dom @testing-library/react babel-jest identity-obj-proxy jest-environment-jsdom
 execução:
 npm run test (configurado no package.json)
