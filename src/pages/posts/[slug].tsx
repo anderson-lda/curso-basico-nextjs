@@ -65,7 +65,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const post = {
         slug,
         title: RichText.asText(response.data.title),
-        content: RichText.asText(response.data.content),
+        content: RichText.asHtml(response.data.content),
         updatedAt: new Date(response.last_publication_date).toLocaleDateString('pt-BR',{
           day:'2-digit',
           month: 'long',
